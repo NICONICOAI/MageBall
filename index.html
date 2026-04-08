@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MageBall - 魔法磚頭</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-box">
+    <div id="menu-controls">
+        <button class="btn-small" onclick="togglePause()">暫停</button>
+        <button class="btn-small" onclick="goHome()">首頁</button>
+    </div>
+    <div id="score-display">SCORE: <span id="scoreVal">0</span></div>
+    <div id="ult-node" onclick="triggerUlt()">🖤</div>
+    <div id="mana-container"><div id="mana-fill"></div></div>
+    <div id="lives-display">❤️❤️❤️</div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="overlay">
+        <div class="title">MageBall</div>
+        <button class="main-btn" onclick="startGame()">開始冒險</button>
+    </div>
+</div>
+<audio id="bgm" src="bgm.mp3" loop></audio>
+<audio id="hitSound" src="hit.mp3"></audio>
+
+<script src="game.js"></script>
+</body>
+</html>
