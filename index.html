@@ -17,14 +17,30 @@
     <div id="mana-container"><div id="mana-fill"></div></div>
     <div id="lives-display">❤️❤️❤️</div>
     <canvas id="gameCanvas"></canvas>
+    
     <div id="overlay">
-        <div class="title">MageBall</div>
-        <button class="main-btn" onclick="startGame()">開始冒險</button>
+        <h1 style="color: white; margin-bottom: 20px;">打磚塊冒險</h1>
+        
+        <div style="margin-bottom: 20px;">
+            <label style="color: white; margin-right: 10px;">關卡選擇：</label>
+            <select id="levelSelect" style="padding: 10px; font-size: 16px; border-radius: 5px; width: 120px;">
+            </select>
+        </div>
+
+        <button onclick="startGame()" style="padding: 15px 40px; font-size: 20px; cursor: pointer; background: #ff69b4; color: white; border: none; border-radius: 8px;">開始遊戲</button>
     </div>
 </div>
-<audio id="bgm" src="bgm.mp3" loop></audio>
-<audio id="hitSound" src="hit.mp3"></audio>
 
+<audio id="audio-bgm" src="Alive.mp3" loop preload="auto"></audio>
+<audio id="audio-hit" src="hit.mp3" preload="auto"></audio>
+
+<script src="config.js"></script>
+<script src="maps.js"></script>
+<script src="sound.js"></script>
+<script src="renderer.js"></script>
+<script src="physics.js"></script>
+<script src="skills.js"></script>
 <script src="game.js"></script>
+
 </body>
 </html>
